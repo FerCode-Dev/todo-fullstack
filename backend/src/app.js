@@ -8,8 +8,8 @@ app.use(cors());
 app.use(express.json());
 
 //RUTAS
-app.get('/', (res, req) => {
-  res.end({ message: 'API To-Do funcionando correctamente 🚀' });
+app.get('/', (req, res) => {
+  res.send({ message: 'API To-Do funcionando correctamente 🚀' });
 });
 
 export default app;
