@@ -9,7 +9,7 @@ app.use(express.json());
 
 //RUTAS
 app.get('/', (req, res) => {
-  res.end({ message: 'API To-Do funcionando correctamente 🚀' });
+  res.send({ message: 'API To-Do funcionando correctamente 🚀' });
 });
 
 export default app;
