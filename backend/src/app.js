@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 //RUTAS
-app.get('/', (res, req) => {
+app.get('/', (req, res) => {
   res.end({ message: 'API To-Do funcionando correctamente 🚀' });
 });
 
