@@ -1,15 +1,14 @@
 import express from 'express';
 import cors from 'cors';
+import taskRoutes from './routes/taskRoute.js';
 
-//INICIALIZACIÓN: Creamos la instancia de la aplicación
 const app = express();
-//MIDDLEWARES: Los "Filtros de Proceso"
-app.use(cors());
-app.use(express.json());
 
-//RUTAS
-app.get('/', (req, res) => {
-  res.send({ message: 'API To-Do funcionando correctamente 🚀' });
-});
+// Middlewares
+app.use(cors()); // Permite que el frontend se conecte
+app.use(express.json()); // Permite leer archivos JSON en las peticiones
+
+// Rutas
+app.use('/api/tasks', taskRoutes);
 
 export default app;
