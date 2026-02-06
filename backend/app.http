@@ -1,0 +1,19 @@
+### Variables
+@hostname = localhost
+@port = 3000
+@host = http://{{hostname}}:{{port}}
+
+### 1. Obtener todas las tareas (GET)
+GET {{host}}/tasks
+Accept: application/json
+
+###
+
+### 2. Crear una nueva tarea (POST)
+POST {{host}}/tasks
+Content-Type: application/json
+
+{
+    "title": "Configurar REST Client",
+    "description": "Probando la creación de tareas desde VS Code"
+} 
