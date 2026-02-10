@@ -1,5 +1,11 @@
+//Este archivo es el "puente"de conexion  entre Node.js y MySQL.
+//módulo de configuración de la base de datos.
+
 import mysql from 'mysql2/promise';
+//MYSQL2 :es una librería (o "driver") para permitir que Node.js
+//se comunique con una base de datos MySQL.
 import dotenv from 'dotenv';
+//dotenv :lobreria para cargar variables de entorno desde un archivo .env.
 
 dotenv.config();
 

@@ -1,0 +1,31 @@
+### Variables
+@hostname = localhost
+@port = 3000
+@host = http://{{hostname}}:{{port}}
+
+### 1. Obtener todas las tareas (GET)
+GET {{host}}/tasks
+Accept: application/json
+
+###
+
+### 2. Crear una nueva tarea (POST)
+POST {{host}}/tasks
+Content-Type: application/json
+
+{
+    "title": "ir al gimnasio",
+    "description": "Probando la creación de tareas desde VS Code"
+} 
+
+
+###3. Eliminar una tarea (DELETE)
+DELETE {{host}}/tasks/1
+
+###4. Actualizar una tarea (PUT)
+PATCH {{host}}/tasks/2
+Content-Type: application/json
+
+{
+    "is_completed": true
+}   

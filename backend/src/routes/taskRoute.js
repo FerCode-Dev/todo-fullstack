@@ -3,13 +3,16 @@ import {
   getTasks,
   createTask,
   updateTaskStatus,
+  deleteTask,
 } from '../controllers/taskController.js';
 
 const router = express.Router();
 
 // Definición de Endpoints
-router.get('/', getTasks); // GET http://localhost:3000/api/tasks
-router.post('/', createTask); // POST http://localhost:3000/api/tasks
-router.patch('/:id', updateTaskStatus); // PATCH http://localhost:3000/api/tasks/1
+//✅ Estas tienen sus funciones listas en el controlador
+router.get('/', getTasks);
+router.post('/', createTask);
+router.patch('/:id', updateTaskStatus);
+router.delete('/:id', deleteTask);
 
 export default router;
