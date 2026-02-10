@@ -47,3 +47,23 @@ export const updateTaskStatus = async (req, res) => {
       .json({ message: 'Error al actualizar la tarea', error: error.message });
   }
 };
+
+export const deleteTask = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // 1. Llamamos al modelo y guardamos el resultado (true o false)
+    const deleted = await Task.delete(id);
+    // 2. Lógica de Negocio: ¿Existía la tarea?
+    if (!deleted) {
+      return res.status(404).json({ message: 'La tarea no existe' });
+    }
+    // 3. Si existía, respondemos éxito
+    res.json({ message: `Tarea ${id} eliminada con éxito` });
+  } catch (error) {
+    // 4. Si algo falló (ej. la base de datos se desconectó)
+    res
+      .status(500)
+      .json({ message: 'Error al eliminar la tarea', error: error.message });
+  }
+};

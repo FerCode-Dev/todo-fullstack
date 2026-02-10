@@ -3,6 +3,7 @@ import {
   getTasks,
   createTask,
   updateTaskStatus,
+  deleteTask,
 } from '../controllers/taskController.js';
 
 const router = express.Router();
@@ -12,6 +13,6 @@ const router = express.Router();
 router.get('/', getTasks);
 router.post('/', createTask);
 router.patch('/:id', updateTaskStatus);
-//router.delete('/:id');
+router.delete('/:id', deleteTask);
 
 export default router;
