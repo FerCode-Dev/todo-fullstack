@@ -1,4 +1,7 @@
 import Task from '../models/taskModel.js';
+//Exactamente. El Controlador es donde reside la lógica de negocio
+//el Controlador decide qué, cuándo y bajo qué condiciones debe ocurrir algo.
+//Gestionar la petición HTTP y la respuesta.
 
 export const getTasks = async (req, res) => {
   try {

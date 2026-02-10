@@ -1,5 +1,6 @@
 import pool from '../config/db.js';
-
+// model es la representación y el esquema de tus datos
+//el Modelo solo sabe leer y escribir en la base de datos,
 const Task = {
   // Obtener todas las tareas
   getAll: async () => {

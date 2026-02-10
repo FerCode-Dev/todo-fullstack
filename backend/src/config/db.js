@@ -1,5 +1,7 @@
 import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
+//Este archivo es el "puente"de conexion  entre Node.js y MySQL.
+//módulo de configuración de la base de datos.
 
 dotenv.config();
 
